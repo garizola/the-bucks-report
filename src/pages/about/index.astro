@@ -1,0 +1,19 @@
+---
+
+import Layout from "@layouts/Layout.astro";
+import Container from "@components/Container.astro";
+import { BLOG } from "@consts";
+
+---
+
+<Layout title={BLOG.TITLE} description={BLOG.DESCRIPTION}>
+  <Container>
+    <aside data-pagefind-ignore>
+      <div class="space-y-10">
+        <h1 class="animate font-semibold text-black dark:text-white">
+          About
+        </h1>
+      </div>
+    </aside>
+  </Container>
+</Layout>

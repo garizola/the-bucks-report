@@ -1,0 +1,100 @@
+---
+import Layout from "@layouts/Layout.astro";
+import Container from "@components/Container.astro";
+import { SITE, HOME, SOCIALS } from "@consts";
+import ArrowCard from "@components/ArrowCard.astro";
+import Link from "@components/Link.astro";
+import { getCollection } from "astro:content";  
+
+const blog = (await getCollection("blog"))
+  .filter((post) => !post.data.draft)
+  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
+  .slice(0, SITE.NUM_POSTS_ON_HOMEPAGE);
+
+
+---
+
+<Layout title={HOME.TITLE} description={HOME.DESCRIPTION}>
+  <Container>
+    <aside data-pagefind-ignore>
+      <div class="flex items-center sm:items-start sm:flex-col gap-4"><img
+        src="../../Milwaukee_Bucks_logo.svg"
+        alt="triangle with all three sides equal"
+        
+        width="100" />
+        <h1 class="font-bold text-3xl text-goodLandGreen dark:text-creamCity">
+          The Bucks Report
+        </h1>
+      </div>
+      
+      
+      
+      <div class="space-y-16">
+        <section>
+          <article class="space-y-4">
+              <p>
+               This is a place for me to diagnose Milwaukee Bucks games. I plan on diving deep in player and team analytics the day after each game occurs. 
+              </p>
+
+          </article>
+        </section>
+
+        <section class="animate space-y-6">
+          <div class="flex flex-wrap items-center justify-between gap-y-2">
+            <h2 class="font-semibold text-black dark:text-white">
+              Latest posts
+            </h2>
+            <Link href="/blog"> See all posts </Link>
+          </div>
+          <ul class="not-prose flex flex-col gap-4">
+            {
+              blog.map((post) => (
+                <li>
+                  <ArrowCard entry={post} />
+                </li>
+              ))
+            }
+          </ul>
+        </section>
+
+       
+
+        <section class="animate space-y-4">
+          <h2 class="font-semibold text-black dark:text-white">
+            Want to contribute? 
+          </h2>
+          <article>
+            <p>
+              If you want to get in touch with me about contributing or just to say
+              hi, connect with me on LinkedIn or send me an email.
+            </p>
+          </article>
+          <ul class="not-prose flex flex-wrap gap-2">
+            {
+              SOCIALS.map((SOCIAL) => (
+                <li class="flex gap-x-2 text-nowrap">
+                  <Link
+                    href={SOCIAL.HREF}
+                    external
+                    aria-label={`${SITE.TITLE} on ${SOCIAL.NAME}`}
+                  >
+                    {SOCIAL.NAME}
+                  </Link>
+                  {"/"}
+                </li>
+              ))
+            }
+            <li class="line-clamp-1">
+              <Link
+                href={`mailto:${SITE.EMAIL}`}
+                aria-label={`Email ${SITE.TITLE}`}
+              >
+                {SITE.EMAIL}
+              </Link>
+            </li>
+          </ul>
+        </section>
+      </div>
+    </aside>
+  </Container>
+</Layout>
