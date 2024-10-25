@@ -15,6 +15,7 @@ html.dark {
 html,
 body {
   @apply size-full;
+  --color-fg-default: 
 }
 
 body {
@@ -79,7 +80,7 @@ pre {
 }
 
 :root {
-  --astro-code-color-text: #00471B;
+  --astro-code-color-text: #09090b;
   --astro-code-color-background: #fafafa;
   --astro-code-token-comment: #a19595;
   --astro-code-token-keyword: #f47067;
@@ -94,7 +95,7 @@ pre {
 
 .dark {
   --astro-code-color-text: #fafafa;
-  --astro-code-color-background: #00471B;
+  --astro-code-color-background: #09090b;
   --astro-code-token-comment: #a19595;
   --astro-code-token-keyword: #f47067;
   --astro-code-token-string: #00a99a;

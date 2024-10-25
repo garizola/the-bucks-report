@@ -17,7 +17,8 @@ const blog = (await getCollection("blog"))
 <Layout title={HOME.TITLE} description={HOME.DESCRIPTION}>
   <Container>
     <aside data-pagefind-ignore>
-      <div class="flex items-center sm:items-start sm:flex-col gap-4"><img
+      <div class="flex items-center sm:items-start sm:flex-col gap-4">
+        <img
         src="../../Milwaukee_Bucks_logo.svg"
         alt="triangle with all three sides equal"
         
@@ -33,7 +34,7 @@ const blog = (await getCollection("blog"))
         <section>
           <article class="space-y-4">
               <p>
-               This is a place for me to diagnose Milwaukee Bucks games. I plan on diving deep in player and team analytics the day after each game occurs. 
+               This is a place for me to diagnose Milwaukee Bucks games. I plan on diving deep into player and team analytics the day after each game occurs. 
               </p>
 
           </article>
@@ -94,6 +95,7 @@ const blog = (await getCollection("blog"))
             </li>
           </ul>
         </section>
+        
       </div>
     </aside>
   </Container>

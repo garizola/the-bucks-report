@@ -1,104 +1,75 @@
 ---
-title: "Everything new in Astro Micro"
-description: "Features, enhancements, and changes."
-date: "2024-05-09"
+title: "Game 1: Bucks @ 76ers"
+description: "Score: 124-109"
+date: "2024-10-24"
 ---
 
 import Callout from "@/components/Callout.astro";
 
 ---
 
-## Pagefind search 🔎
 
-[Pagefind](https://pagefind.app) is a search library for static websites. Micro uses [Sergey Shishkin's](https://github.com/shishkin) [astro-pagefind](https://github.com/shishkin/astro-pagefind) integration. This integration simplifies development and does not require any changes to the default build script.
+## Box Score
+### Basic 
+```
+Starters                          MP FG FGA  FG% 3P 3PA   3P% FT FTA   FT% ORB DRB TRB AST STL BLK TOV PF PTS GmSc +/-
+----------------------------------------------------------------------------------------------------------------------
+Damian Lillard                 38:18  9  19 .474  6  12  .500  6   7  .857   3   6   9   6   0   0   3  1  30 24.6 +19
+Brook Lopez                    35:32  3  11 .273  1   6  .167  3   4  .750   1   7   8   6   0   6   4  4  10  8.7 +18
+Gary Trent Jr.                 34:27  3   6 .500  2   5  .400  3   3 1.000   0   2   2   0   0   0   0  5  11  6.6 +11
+Giannis Antetokounmpo          31:12  8  11 .727  0         0  9  16  .563   1  13  14   7   0   1   3  4  25 23.3  +7
+Taurean Prince                 30:23  6   7 .857  4   5  .800  0         0   0   5   5   3   0   0   0  2  16 16.3  +2
+Bobby Portis                   25:51  7  10 .700  1   1 1.000  1   1 1.000   1   2   3   3   2   1   4  4  16 12.3  +8
+Pat Connaughton                20:54  4   9 .444  1   5  .200  0         0   1   3   4   1   0   1   0  1   9  6.9  +5
+Delon Wright                   13:09  1   3 .333  0   1  .000  0         0   0   0   0   0   1   0   0  0   2  1.3  +2
+A.J. Green                      4:04  0        0  0         0  0         0   0   0   0   1   1   0   0  0   0  1.7  +4
+Tyler Smith                     2:13  2   3 .667  1   2  .500  0         0   1   0   1   0   0   0   0  1   5  4.0  -1
+Andre Jackson Jr.               1:06  0        0  0         0  0         0   0   0   0   0   0   0   0  0   0  0.0   0
+AJ Johnson                      1:06  0   1 .000  0         0  0         0   0   0   0   0   0   0   0  0   0 -0.7   0
+Ryan Rollins                    1:06  0        0  0         0  0         0   0   0   0   0   0   0   0  1   0 -0.4   0
+MarJon Beauchamp                0:37  0        0  0         0  0         0   0   0   0   0   0   0   0  0   0  0.0   0
+Chris Livingston                                                                                          Did Not Play
+Team Totals                      240 43  80 .538 16  37  .432 22  31  .710   8  38  46  27   4   9  14 23          124
 
-Press <kbd>/</kbd> or <kbd>CTRL</kbd> + <kbd>K</kbd> to open the search dialog. For Mac users, <kbd>⌘</kbd> + <kbd>K</kbd> can also be used. To dismiss the search dialog, press <kbd>Esc</kbd> or click on an area outside the component.
-
-### Build and develop
-
-<Callout type="error">
-  The site **must** be built at least once so Pagefind can index the content.
-</Callout>
-
-```bash
-# Pagefind must index the site to function
-npm run build
 ```
 
-When developing you can continue to use `npm run dev` and Pagefind will use the index from the last available build.
+### Advanced 
+```
+Starters                          MP   TS%  eFG% 3PAr   FTr ORB% DRB% TRB% AST% STL% BLK% TOV%  USG%  ORtg  DRtg BPM
+--------------------------------------------------------------------------------------------------------------------
+Damian Lillard                 38:18  .679  .632 .632  .368  9.4 13.7 11.9 23.7  0.0  0.0 12.0  29.2   132       113
+Brook Lopez                    35:32  .392  .318 .545  .364  3.4 17.2 11.4 20.8  0.0 12.1 23.9  21.0    86       104
+Gary Trent Jr.                 34:27  .751  .667 .833  .500  0.0  5.1  2.9  0.0  0.0  0.0  0.0   9.5   152       117
+Giannis Antetokounmpo          31:12  .693  .727 .000 1.455  3.8 36.4 22.7 35.1  0.0  2.3 14.3  30.1   133       101
+Taurean Prince                 30:23 1.143 1.143 .714  .000  0.0 14.4  8.3 14.1  0.0  0.0  0.0  10.3   221       113
+Bobby Portis                   25:51  .766  .750 .100  .100  4.6  6.8  5.9 18.6  3.7  2.8 27.7  24.9   112       106
+Pat Connaughton                20:54  .500  .500 .556  .000  5.7 12.5  9.7  6.8  0.0  3.4  0.0  19.2   111       112
+Delon Wright                   13:09  .333  .333 .333  .000  0.0  0.0  0.0  0.0  3.7  0.0  0.0  10.2    69       112
+A.J. Green                                             4:04  0.0  0.0  0.0 27.4 11.9       0.0   0.0   237        94
+Tyler Smith                     2:13  .833  .833 .667  .000 54.1  0.0 22.8  0.0  0.0  0.0  0.0  60.4   183       118
+Andre Jackson Jr.                                      1:06  0.0  0.0  0.0  0.0  0.0       0.0   0.0     0       120
+AJ Johnson                      1:06  .000  .000 .000  .000  0.0  0.0  0.0  0.0  0.0  0.0  0.0  40.5     0       120
+Ryan Rollins                                           1:06  0.0  0.0  0.0  0.0  0.0       0.0   0.0     0       116
+MarJon Beauchamp                                       0:37  0.0  0.0  0.0  0.0  0.0       0.0   0.0     0       120
+Chris Livingston                                                                                        Did Not Play
+Team Totals                      240  .662  .638 .463  .388 20.0 69.1 48.4 62.8  4.0 13.4 13.0 100.0 125.0     109.9
+```
+---
+## Thoughts
+
+I must admit I was not too excited for this first game. After what happened last season, it almost feels impossible to trust the team. It felt like all hope had been drained out of every player, coach, and fan. 
+
+I don’t want to get too in the weeds about last season because the 2024-2025 season is officially underway. During the offseason there were a few moves made GM, Jon Horst. I don’t think any Bucks fan was keen on watching the likes of Taurean Prince, Gary Trent Jr, and Delon Wright play. All have decent in their respective careers, but not stellar. 
+
+Fast forward to gametime and after watching the first half, you could tell they were going to make a massive impact on the team. Delon Wright’s performance was rather forgettable, but that is just fine. Being the 8th or 9th man over A.J. Green and Andre Jackson Jr is quite important. Not that A.J. and Ajax are bad, but having a better player step in and take minutes from them almost seemed like a crucial step towards winning games at the end of last season. 
+
+
+Prince and Trent stood as big surprises. While they both played slightly lackluster defense, both were solid. With both having a USG% under 10.3, they posted zero turnovers. First, Gary Trent Jr. had a whopping 34.5 minutes on the court. His PIE was only 3.9. Trent is obviously going to play a similar role to Beasley last season; however, I think most can agree he certainly an upgrade. Trent went 2/5 from beyond the arc on Tuesday. Prince on the other hand, while assumingly starting in place of Middleton, went 4/5 from three and 2/2 from inside the arc. This led him to put up an 18.3 PIE which was 3rd behind Giannis and Dame. Quite a debut performance. 
+
+
+**Taurean Prince Shot Chart**
+<svg preserveAspectRatio="xMaxYMin" viewBox="0 0 431 405.14" width="300" style="margin: auto;"><style></style><rect width="431" height="405.14" rx="4" ry="4" fill="#09090b"></rect><g class="court-g"><line class="shot-chart-court-baseline" x1="0" y1="0" x2="431" y2="0" stroke="#ffffff55"></line><path d="M189.51676575310765,79.68318560073843L182.45933891784432,94.73438768822663L174.20894649806968,109.16619224390261L164.8195316587315,122.88424045741752L154.35248478318016,135.79884023900257L142.87624208722167,147.82555264917374L130.46583816572505,158.8857439820038L117.20241539734879,168.9070998922997L103.17269341502222,177.8240982051922L88.46840211091995,185.57843731678682L73.18568188308603,192.11941738488522L57.4244550450488,197.40427181745378L41.287772508309736,201.39844689148444L24.881140009263223,204.0758276740277L8.3118282858453,205.41890876826952L-8.31182828584516,205.41890876826952L-24.88114000926308,204.0758276740277L-41.28777250830978,201.3984468914844L-57.42445504504876,197.40427181745378L-73.18568188308599,192.11941738488525L-88.4684021109199,185.57843731678685L-103.17269341502218,177.8240982051922L-117.20241539734882,168.90709989229967L-130.46583816572505,158.88574398200376L-142.8762420872216,147.82555264917377L-154.35248478318005,135.79884023900271L-164.81953165873145,122.88424045741758L-174.20894649806965,109.16619224390263L-182.4593389178443,94.73438768822669L-189.51676575310765,79.68318560073847" class="shot-chart-court-3pt-line" transform="translate(215.5, 40.94500000000001)" fill="none" stroke-width="3" stroke="#ffffff55"></path><line class="shot-chart-court-3pt-line" x1="405.14" y1="0" x2="405.14" y2="120.68" stroke-width="3" stroke="#ffffff55"></line><line class="shot-chart-court-3pt-line" x1="25.859999999999985" y1="0" x2="25.859999999999985" y2="120.68" stroke-width="3" stroke="#ffffff55"></line><path d="M51.72,-3.1669366225950553e-15L51.416815144023474,5.591915632886266L50.510815141325686,11.118271167714155L49.01262201357454,16.514275138632875L46.939800705381906,21.71666433269687L44.31665315138772,26.66444549319555L41.17393335829589,31.299610409821543L37.54848684226433,35.56781601189904L33.48281864891614,39.41902149120135L29.02459502054242,42.80807498467437L24.22608455299315,45.6952429387483L19.14354539418037,48.04667594892445L13.8365656687313,49.83480561309421L8.367364861708989,51.03866774584773L2.8000643520378135,51.64414816438012L-2.8000643520378006,51.64414816438012L-8.367364861708978,51.03866774584774L-13.836565668731266,49.83480561309422L-19.14354539418036,48.04667594892446L-24.226084552993118,45.695242938748315L-29.02459502054241,42.808074984674384L-33.48281864891612,39.419021491201356L-37.54848684226431,35.56781601189907L-41.17393335829588,31.29961040982155L-44.31665315138772,26.664445493195565L-46.93980070538189,21.716664332696897L-49.01262201357454,16.514275138632875L-50.510815141325686,11.118271167714132L-51.416815144023474,5.5919156328862565L-51.72,9.500809867785166e-15" class="shot-chart-court-ft-circle-top" transform="translate(215.5, 163.78)" fill="none" stroke-width="3" stroke="#ffffff55"></path><rect class="shot-chart-court-key" x="146.54" y="0" width="137.92000000000002" height="163.78" fill="none" stroke-width="3" stroke="#ffffff55"></rect><path d="M-51.72,-3.1669366225950553e-15L-51.416815144023474,-5.591915632886273L-50.51081514132568,-11.118271167714171L-49.012622013574536,-16.514275138632893L-46.9398007053819,-21.716664332696894L-44.316653151387705,-26.664445493195576L-41.1739333582959,-31.299610409821526L-37.54848684226432,-35.56781601189906L-33.48281864891613,-39.419021491201356L-29.024595020542417,-42.80807498467438L-24.226084552993143,-45.69524293874831L-19.14354539418038,-48.04667594892445L-13.836565668731305,-49.83480561309421L-8.367364861708994,-51.03866774584773L-2.80006435203779,-51.64414816438012L2.8000643520377957,-51.64414816438012L8.367364861708994,-51.03866774584773L13.836565668731295,-49.83480561309421L19.14354539418038,-48.04667594892445L24.226084552993143,-45.69524293874831L29.024595020542417,-42.80807498467438L33.48281864891613,-39.419021491201356L37.54848684226432,-35.56781601189906L41.1739333582959,-31.299610409821526L44.316653151387705,-26.664445493195576L46.9398007053819,-21.716664332696894L49.012622013574536,-16.514275138632893L50.51081514132568,-11.118271167714171L51.416815144023474,-5.591915632886273L51.72,-3.1669366225950553e-15" class="shot-chart-court-ft-circle-bottom" transform="translate(215.5, 163.78)" fill="none" stroke-width="3" stroke="#ffffff55" style="stroke-dasharray: 10, 10;"></path><path d="M34.480000000000004,-2.1112910817300373e-15L34.277876762682325,3.7279437552575114L33.67387676088379,7.412180778476104L32.67508134238303,11.009516759088585L31.293200470254607,14.477776221797914L29.544435434258485,17.776296995463703L27.449288905530597,20.86640693988103L25.032324561509558,23.71187734126603L22.321879099277425,26.279347660800905L19.349730013694952,28.538716656449587L16.150723035328767,30.46349529249887L12.76236359612025,32.031117299282975L9.224377112487534,33.22320374206281L5.578243241139327,34.025778497231826L1.8667095680252093,34.429432109586756L-1.8667095680252006,34.429432109586756L-5.578243241139319,34.025778497231826L-9.224377112487511,33.223203742062815L-12.762363596120242,32.031117299282975L-16.150723035328745,30.463495292498884L-19.349730013694945,28.538716656449594L-22.321879099277417,26.27934766080091L-25.032324561509544,23.71187734126605L-27.449288905530594,20.866406939881035L-29.54443543425848,17.77629699546371L-31.293200470254597,14.477776221797935L-32.67508134238303,11.009516759088585L-33.67387676088379,7.41218077847609L-34.277876762682325,3.7279437552575048L-34.480000000000004,6.3338732451901115e-15" class="shot-chart-court-restricted-area" transform="translate(215.5, 40.94500000000001)" fill="none" stroke-width="3" stroke="#ffffff55"></path><line class="shot-chart-court-key-mark" x1="288.77000000000004" y1="60.34" x2="284.46000000000004" y2="60.34" stroke-width="3" stroke="#ffffff55"></line><line class="shot-chart-court-key-mark" x1="142.23" y1="60.34" x2="146.54" y2="60.34" stroke-width="3" stroke="#ffffff55"></line><line class="shot-chart-court-key-mark" x1="288.77000000000004" y1="68.96000000000001" x2="284.46000000000004" y2="68.96000000000001" stroke-width="3" stroke="#ffffff55"></line><line class="shot-chart-court-key-mark" x1="142.23" y1="68.96000000000001" x2="146.54" y2="68.96000000000001" stroke-width="3" stroke="#ffffff55"></line><line class="shot-chart-court-key-mark" x1="288.77000000000004" y1="94.82000000000001" x2="284.46000000000004" y2="94.82000000000001" stroke-width="3" stroke="#ffffff55"></line><line class="shot-chart-court-key-mark" x1="142.23" y1="94.82000000000001" x2="146.54" y2="94.82000000000001" stroke-width="3" stroke="#ffffff55"></line><line class="shot-chart-court-key-mark" x1="288.77000000000004" y1="120.68" x2="284.46000000000004" y2="120.68" stroke-width="3" stroke="#ffffff55"></line><line class="shot-chart-court-key-mark" x1="142.23" y1="120.68" x2="146.54" y2="120.68" stroke-width="3" stroke="#ffffff55"></line><line class="shot-chart-court-backboard" x1="189.64" y1="34.480000000000004" x2="241.36" y2="34.480000000000004" fill="none" stroke-width="3" stroke="#ffffff55"></line></g><g class="shot-chart-circles"><circle cx="207.742" cy="60.771" r="4.31" opacity="0.95" fill="#FB923C" stroke="#FED7AA" stroke-width="0.6465"></circle><circle cx="421.51800000000003" cy="98.69900000000001" r="4.31" opacity="0.95" fill="#FB923C" stroke="#FED7AA" stroke-width="0.6465"></circle><circle cx="19.826000000000022" cy="40.945" r="4.31" opacity="0.95" fill="#FB923C" stroke="#FED7AA" stroke-width="0.6465"></circle><circle cx="261.186" cy="250.411" r="4.31" opacity="0.95" fill="#FB923C" stroke="#FED7AA" stroke-width="0.6465"></circle><circle cx="413.76" cy="104.733" r="4.31" opacity="0.95" fill="#FB923C" stroke="#FED7AA" stroke-width="0.6465"></circle><circle cx="235.326" cy="30.601" r="4.31" opacity="0.95" fill="#FB923C" stroke="#FED7AA" stroke-width="0.6465"></circle><circle cx="356.868" cy="211.621" r="4.31" opacity="0.95" fill="#64748Baa" stroke="#94A3B8aa" stroke-width="0.6465"></circle></g></svg>
+
+As for the other players on the team, they were all in line with past performances. Dame and Giannis were dominant, while Brook and Bobby played great defense in and around the paint. I look forward to tomorrow night’s matchup against the Bulls!
 
 ---
-
-## Giscus comments 💬
-
-[Giscus](https://giscus.app) leverages Github discussions to act as a comments system. To get Giscus working on your own website, see [here](/blog/01-getting-started#deploy-the-site).
-
----
-
-## Callout component 🆕
-
-<Callout>
-  Adipisicing et officia reprehenderit fugiat occaecat cupidatat exercitation
-  labore consequat ullamco nostrud non.
-</Callout>
-
-<Callout type="info">
-  Adipisicing et officia reprehenderit fugiat occaecat cupidatat exercitation
-  labore consequat ullamco nostrud non.
-</Callout>
-
-<Callout type="warning">
-  Adipisicing et officia reprehenderit fugiat occaecat cupidatat exercitation
-  labore consequat ullamco nostrud non.
-</Callout>
-
-<Callout type="error">
-  Adipisicing et officia reprehenderit fugiat occaecat cupidatat exercitation
-  labore consequat ullamco nostrud non.
-</Callout>
-
----
-
-## UI enhancements 🎨
-
-- Elements are styled and animate on focus
-- Increased contrast in light mode
-- Active theme is indicated by theme buttons
-- Separate syntax highlight themes for light and dark mode
-- Code blocks have a copy button
-- Add pagination to the bottom of blog posts
-- Create 404 page
-- Add ToC component to posts
-
----
-
-## Other changes
-
-- Change fonts to Geist Sans and Geist Mono
-- Switch base color from "stone" to "neutral"
-- Change formatted date to use "long" option for month
-- Minor spacing changes throughout
-- Remove "work" collection and components
-  - If desired, you can get the code from [Astro Nano](https://github.com/markhorn-dev/astro-nano)
-- Slightly increased link decoration offset
-- Slightly sped-up animations
-- Reversed animation
-- Ensure posts use an h1 tag for post titles
-- Tweaked typography
-
----
-
-## Issues ⚠️
-
-### Active issues
-
-- [PostNavigation.astro is broken when deployed with Cloudflare Pages](https://github.com/trevortylerlee/astro-micro/issues/39)
-
-### Closed issues
-
-- Fixed by [blopker](https://github.com/blopker): [Pagefind requires a refresh to function when ViewTransitions is enabled](https://github.com/trevortylerlee/astro-micro/issues/7)
-- Fixed by [blopker](https://github.com/blopker): [ToC links are obscured by Header when scrolled to](https://github.com/trevortylerlee/astro-micro/issues/4)
-- Fixed by [cgranier](https://github.com/cgranier): [Pagination links advance by slug/folder](https://github.com/trevortylerlee/astro-micro/issues/26)
-- Fixed by [cgranier](https://github.com/cgranier): [Hides Table of Contents when there are no headings](https://github.com/trevortylerlee/astro-micro/pull/30)
-- Fixed by [arastoonet](https://github.com/arastoonet): [Fix typo in README](https://github.com/trevortylerlee/astro-micro/pull/19)
-- Fixed by [luciancah](https://github.com/luciancah): [Prevent Pagefind from double-indexing results](https://github.com/trevortylerlee/astro-micro/issues/40)
