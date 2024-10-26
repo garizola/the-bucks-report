@@ -34,6 +34,10 @@
     "typescript": "^5.6.2",
     "webcoreui": "^0.6.1"
   },
+  "peerDependencies": {
+  "react": "^17.0.0 || ^18.0.0",
+  "react-dom": "^17.0.0 || ^18.0.0"
+},
   "devDependencies": {
     "@tailwindcss/typography": "^0.5.15",
     "pagefind": "^1.1.1",
