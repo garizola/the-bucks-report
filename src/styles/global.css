@@ -8,9 +8,7 @@ html {
   scroll-padding-top: 100px;
 }
 
-tspan {
-  fill: orange !important;
-}
+
 
 html.dark {
   color-scheme: dark;
@@ -83,7 +81,13 @@ pre {
   @apply border border-black/15 py-5 dark:border-white/20;
 }
 
+tspan {
+  @apply  fill-[#09090b] dark:fill-[#fafafa]; 
+}
+
+
 :root {
+  --DataGrid-containerBackground: #fafafa !important;
   --astro-code-color-text: #09090b;
   --astro-code-color-background: #fafafa;
   --astro-code-token-comment: #a19595;
@@ -98,6 +102,7 @@ pre {
 }
 
 .dark {
+  --DataGrid-containerBackground: blue !important;
   --astro-code-color-text: #fafafa;
   --astro-code-color-background: #09090b;
   --astro-code-token-comment: #a19595;
@@ -122,4 +127,33 @@ pre {
 
 .copy-code:active {
   @apply scale-90 transition-transform;
+}
+
+/* 
+.css-1nnh8nx-MuiDataGrid-root {
+  @apply dark:text-orange-400;
+} */
+
+.MuiDataGrid-columnHeader {
+  @apply bg-[#E9E9E9] dark:bg-[#232323] dark:text-white;
+}
+
+.MuiDataGrid-columnHeader svg {
+  @apply bg-[#E9E9E9] dark:bg-[#232323] dark:text-white;
+}
+
+.MuiDataGrid-cell {
+  @apply  dark:text-white;
+}
+
+.MuiDataGrid-cell:hover, .MuiDataGrid-cell:active {
+  @apply  dark:text-white;
+}
+
+.MuiDataGrid-footerContainer {
+  @apply bg-[#E9E9E9] dark:bg-[#232323] dark:text-white;
+}
+
+.MuiTablePagination-toolbar {
+  @apply dark:text-white;
 }

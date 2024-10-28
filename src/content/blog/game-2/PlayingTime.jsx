@@ -2,7 +2,7 @@ import { PieChart } from '@mui/x-charts/PieChart';
 
 const PlayingTime = () => {
   return (
-    <div className="w-full bg-[rgb(23,23,23)] pb-10 sm:px-4">
+    <div className="w-full pb-10 sm:px-4">
     <PieChart
     height={400}
     colors={['#10451d', '#155d27', '#1a7431', '#208b3a', '#25a244', '#2dc653', '#4ad66d', '#6ede8a']}
