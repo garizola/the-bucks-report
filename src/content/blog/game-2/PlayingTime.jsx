@@ -17,7 +17,7 @@ const PlayingTime = () => {
           { id: 5, value: 27.50, label: 'Bobby Portis' },
           { id: 6, value: 16.33, label: 'Pat Connaughton' },
           { id: 7, value: 13.08, label: 'Delon Wright' },
-          { id: 8, value: 11.15, label: 'A.J. Bird' },
+          { id: 8, value: 11.15, label: 'A.J. Green' },
           
         ],
       },

@@ -1,6 +1,8 @@
 import React from 'react'
 import { DataGrid } from '@mui/x-data-grid';
-// import { Box, ThemeProvider, createTheme } from '@mui/system';
+import Paper from '@mui/material/Box'; 
+
+
 const columns = [
     { field: 'name', headerName: 'Name', width: 150 },
     { field: 'MP', headerName: 'MP', width: 120 },
@@ -69,7 +71,8 @@ const columns = [
 
 const AdvancedBS = () => {
   return (
-    <div className=''><DataGrid
+    <Box sx={{ height: 400, width: '100%' }}>
+      <DataGrid
     rows={rows}
     columns={columns}
     initialState={{
@@ -82,7 +85,7 @@ const AdvancedBS = () => {
     pageSizeOptions={[9]}
     
     
-  /></div>
+  /></Box>
   )
 }
 

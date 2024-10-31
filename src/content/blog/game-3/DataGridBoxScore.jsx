@@ -74,7 +74,7 @@ const rows = [
 
 const DataGridBoxScore = () => {
   return (
-    <div className=''>
+    <>
       <DataGrid
     rows={rows}
     columns={columns}
@@ -88,7 +88,7 @@ const DataGridBoxScore = () => {
     pageSizeOptions={[9]}
     
     
-  /></div>
+  /></>
   )
 }
 
